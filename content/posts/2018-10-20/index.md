@@ -1,8 +1,8 @@
 ---
-path: "/post-six"
-cover: "../2018-10-16/speed.jpg"
-date: "2018-10-20"
-title: "Post Number Six"
+path: '/post-six'
+cover: '../2018-10-16/birthday.jpg'
+date: '2018-10-20'
+title: 'Post Number Six'
 tags: ['gatsby', 'tutorial']
 published: true
 ---
