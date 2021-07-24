@@ -7,9 +7,9 @@ module.exports = {
   siteUrl: 'https://gatsby-tutorial-starter.netlify.com', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   logo: 'static/logo/logo.png', // Used for SEO
-  banner: 'static/logo/banner.png',
+  banner: 'static/logo/logo1.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/favicon.png', // Used for manifest favicon generation
+  favicon: 'static/logo/logo-name.png', // Used for manifest favicon generation
   shortName: 'GatsbyTut', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Justin', // Author for schemaORGJSONLD
   themeColor: '#3e7bf2',
