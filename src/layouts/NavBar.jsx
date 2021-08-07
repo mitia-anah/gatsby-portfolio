@@ -11,12 +11,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Nav = styled.nav`
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   font-family: ${props => props.theme.fontFamily.body};
   font-weight: 500;
   font-size: 1.1rem;
-  align-items: center;
   a {
     color: ${props => props.theme.colors.white.base};
     margin-left: 2rem;

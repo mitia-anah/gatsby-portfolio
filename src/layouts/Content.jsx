@@ -7,11 +7,6 @@ const Wrapper = styled.div`
   ${prism};
   p,
   li {
-    letter-spacing: -0.003em;
-    --baseline-multiplier: 0.179;
-    --x-height-multiplier: 0.35;
-    font-size: 1.15rem;
-    line-height: 2;
     code {
       padding: 0.2rem 0.5rem;
       margin: 0.5rem 0;

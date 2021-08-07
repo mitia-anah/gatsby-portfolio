@@ -1,5 +1,6 @@
 ---
 path: '/post-one'
+urlPath: 'https://photograf.netlify.app/'
 cover: './photograf.jpg'
 date: '2020-05-15'
 title: 'Post Number One'
