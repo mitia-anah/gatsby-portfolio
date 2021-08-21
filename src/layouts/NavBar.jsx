@@ -5,9 +5,12 @@ import Headroom from 'react-headroom';
 import logo from '../../static/logo/logo1.png';
 
 const StyledLink = styled(Link)`
-  display: flex;
-  font-weight: 700;
-  align-items: center;
+  display: none;
+  @media (min-width: 800px) {
+    display: block;
+    width: 90%;
+    cursor: pointer;
+  }
 `;
 
 const Nav = styled.nav`

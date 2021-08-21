@@ -6,10 +6,16 @@ const Wrapper = styled.section`
   text-align: ${props => (props.center ? 'center' : '')};
   margin: auto;
   padding: 3rem 1.5rem;
-  width: 60%;
+  width: 80%;
   max-width: ${props => props.theme.layout[props.type]};
   height: 100%;
   flex: 1;
+
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+  }
 
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     width: 90%;
