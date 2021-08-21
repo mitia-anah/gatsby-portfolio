@@ -128,4 +128,5 @@ PostList.propTypes = {
   excerpt: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  urlPath: PropTypes.string.isRequired,
 };

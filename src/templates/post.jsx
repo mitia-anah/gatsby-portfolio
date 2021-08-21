@@ -22,7 +22,7 @@ const PostSuggestion = styled.div`
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const { html, frontmatter, excerpt } = data.markdownRemark;
-  const { date, title, tags, path, description } = frontmatter;
+  const { date, title, tags, path, description, urlPath } = frontmatter;
   const image = frontmatter.cover.childImageSharp.fluid;
 
   return (
@@ -32,6 +32,7 @@ const Post = ({ data, pageContext }) => {
         description={description || excerpt || ' '}
         banner={image}
         pathname={path}
+        urlPath={urlPath}
         article
       />
       <Header title={title} date={date} cover={image} />
@@ -79,6 +80,7 @@ export const query = graphql`
         date
         title
         tags
+        urlPath
         cover {
           childImageSharp {
             fluid(

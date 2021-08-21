@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Layout, Container } from 'layouts';
 import { Header } from 'components';
+import { Photograph } from './photograph';
+import { Birthday } from './photograph';
+import { Quiz } from './quiz';
 import config from '../../config/site';
 
 const StyledLink = styled(Link)`
@@ -29,6 +32,12 @@ const Information = styled.div`
 const Tag = ({ pageContext }) => {
   const { posts, tagName } = pageContext;
   const upperTag = tagName.charAt(0).toUpperCase() + tagName.slice(1);
+  const shuffleSite = posts.map(site => site.frontmatter.title);
+  const site1 = 'Post Number One' ? <Photograph /> : '';
+  const site2 = 'Post Number Two' ? <Birthday /> : '';
+  const site3 = 'Post Number Three' ? <Quiz /> : '';
+  const shuffledSite = shuffleSite ? (site1 ? site2 : site3) : '';
+
   return (
     <Layout>
       <Helmet title={`${tagName} | ${config.siteTitle}`} />
@@ -38,9 +47,11 @@ const Tag = ({ pageContext }) => {
       <Container>
         <Information>
           {posts.map((post, index) => (
-            <Link key={index} to={post.frontmatter.path}>
-              <h3>{post.frontmatter.title}</h3>
-            </Link>
+            <>
+              <Link key={index} to={post.frontmatter.path}>
+                <h3>{post.frontmatter.title}</h3>
+              </Link>
+            </>
           ))}
         </Information>
       </Container>

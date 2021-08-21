@@ -1,5 +1,6 @@
 ---
 path: '/post-three'
+urlPath: '/quiz'
 cover: './quiz.jpg'
 date: '2018-10-17'
 title: 'Post Number Three'

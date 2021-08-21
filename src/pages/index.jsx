@@ -29,7 +29,7 @@ const Index = ({ data }) => {
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
+          const { cover, path, title, date, urlPath } = frontmatter;
           return (
             <PostList
               key={id}
@@ -38,6 +38,7 @@ const Index = ({ data }) => {
               title={title}
               date={date}
               excerpt={excerpt}
+              urlPath={urlPath}
             />
           );
         })}
@@ -61,6 +62,7 @@ Index.propTypes = {
               title: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               tags: PropTypes.array,
+              urlPath: PropTypes.string,
             }),
           }),
         }).isRequired
@@ -83,6 +85,7 @@ export const query = graphql`
             title
             path
             tags
+            urlPath
             date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {

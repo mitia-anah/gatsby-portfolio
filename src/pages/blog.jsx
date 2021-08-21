@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
-import { Website } from '../templates/website';
 
 const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;

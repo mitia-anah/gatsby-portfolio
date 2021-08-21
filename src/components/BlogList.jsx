@@ -26,9 +26,9 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
       </Image>
       <Information>
         <Date>{date}</Date>
-        <Link to={path}>
+        <a href={path}>
           <Title>{title}</Title>
-        </Link>
+        </a>
         <TagsBlock list={tags} />
         {excerpt}
       </Information>
